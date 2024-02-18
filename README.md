@@ -1,7 +1,17 @@
-# Tauri + Yew
+# Chat Doc
 
-This template should help get you started developing with Tauri and Yew.
+## Develop
 
-## Recommended IDE Setup
+### Tauri
+Execute application
 
-[VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+``` bash
+npx tailwindcss init
+```
+
+### Tailwind
+Execute watch mode
+
+``` bash
+npx tailwindcss -i ./tailwindcss/input.css -o ./styles/build.css --watch
+``` 
