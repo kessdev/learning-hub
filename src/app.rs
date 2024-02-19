@@ -4,6 +4,8 @@ use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::spawn_local;
 use yew::prelude::*;
 
+use crate::components::title_bar::TitleBar;
+
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = ["window", "__TAURI__", "tauri"])]
@@ -60,6 +62,8 @@ pub fn app() -> Html {
     };
 
     html! {
+    <>
+        <TitleBar />
         <main class="container">
             <div class="row">
                 <a href="https://tauri.app" target="_blank">
@@ -88,5 +92,6 @@ pub fn app() -> Html {
 
             <p><b>{ &*greet_msg }</b></p>
         </main>
+    </>
     }
 }

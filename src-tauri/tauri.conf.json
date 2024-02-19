@@ -13,9 +13,8 @@
   "tauri": {
     "allowlist": {
       "all": false,
-      "shell": {
-        "all": false,
-        "open": true
+      "window": {
+        "startDragging": true
       }
     },
     "bundle": {
@@ -37,9 +36,12 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "chat-doc",
+        "title": "Chat Doc",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "minWidth": 800,
+        "minHeight": 600,
+        "decorations": false
       }
     ]
   }
