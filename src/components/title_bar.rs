@@ -4,7 +4,7 @@ use wasm_bindgen_futures::spawn_local;
 use web_sys::MouseEvent;
 use yew::{function_component, html, Callback, Html};
 
-use crate::components::image::{MinimizeImage, MaximizeImage, CloseImage};
+use crate::components::image::{MinimizeImage, MaximizeImage, CloseImage, BookImage};
 
 #[wasm_bindgen]
 extern "C" {
@@ -45,11 +45,14 @@ pub fn title_bar() -> Html {
     });
     
     html! {
-        <div data-tauri-drag-region="true" class="w-full fixed flex justify-between p-1 bg-sky-950">
+        <div data-tauri-drag-region="true" class="w-full flex justify-between p-1 bg-sky-950">
             <div>
-                <span class="text-sky-50 ml-3 font-bold text-md">{"Chat Doc"}</span>
+                <span class="flex flex-row text-sky-50 space-x-4 ml-3 font-bold text-md">
+                    <BookImage class="w-5 h-5 fill-sky-50" />
+                    <span>{"Chat Doc"}</span>
+                </span>
             </div>
-            <div class="flex justify-normal space-x-2 mr-3">
+            <div class="flex flex-row justify-normal space-x-2 mr-3">
                 <div onclick={ on_minimize }>
                     <MinimizeImage class="size-5 rounded-md fill-sky-50 hover:fill-sky-950 hover:bg-sky-50" />
                 </div>
