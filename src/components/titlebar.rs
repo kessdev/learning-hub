@@ -12,8 +12,8 @@ extern "C" {
     async fn invoke(cmd: &str, args: JsValue) -> Result<JsValue, JsValue>;
 }
 
-#[function_component(TitleBar)]
-pub fn title_bar() -> Html {
+#[function_component(Titlebar)]
+pub fn titlebar() -> Html {
     let on_minimize = Callback::from(move |_event: MouseEvent| {
         spawn_local(async move {
             let empty_args = to_value(&{}).unwrap();

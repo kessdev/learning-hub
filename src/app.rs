@@ -1,8 +1,9 @@
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
 use yew::prelude::*;
+use bounce::BounceRoot;
 
-use crate::{components::title_bar::TitleBar, views::chat::navigation::nav_panel::NavPanel};
+use crate::{components::titlebar::Titlebar, views::chat::chat_view::ChatView};
 
 #[wasm_bindgen]
 extern "C" {
@@ -18,11 +19,11 @@ struct GreetArgs<'a> {
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
-        <main class="w-screen h-screen flex flex-col">
-            <TitleBar />
-            <div class="grow flex flex-row">
-                <NavPanel />
-            </div>
-        </main>
+        <BounceRoot>
+            <main class="w-screen h-screen flex flex-col">
+                <Titlebar />
+                <ChatView />
+            </main>
+        </BounceRoot>
     }
 }
