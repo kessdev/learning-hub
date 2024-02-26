@@ -6,7 +6,7 @@
 Execute application
 
 ``` bash
-npx tailwindcss init
+cargo tauri dev
 ```
 
 ### Tailwind
